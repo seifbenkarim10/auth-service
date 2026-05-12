@@ -14,7 +14,6 @@ import configuration from './config/configuration';
       inject: [ConfigService],
       useFactory: (config: ConfigService) => {
         const uri = config.get<string>('mongodb.uri');
-        console.log('MongoDB URI:', uri); // temporary debug
         return { uri };
       },
     }),
